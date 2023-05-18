@@ -1,11 +1,11 @@
-About asciidoctor
-=================
+About asciidoctor-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asciidoctor-feedstock/blob/main/LICENSE.txt)
 
 Home: https://asciidoctor.org
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asciidoctor-feedstock/blob/main/LICENSE.txt)
 
 Summary: A fast, open source text processor and publishing toolchain for converting AsciiDoc content to HTML 5, DocBook 5, and other formats.
 
