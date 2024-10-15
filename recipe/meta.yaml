@@ -6,16 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 52208807f237dfa0ca29882f8b13d60b820496116ad191cf197ca56f2b7fddf3
+  - url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
+    sha256: 52208807f237dfa0ca29882f8b13d60b820496116ad191cf197ca56f2b7fddf3
+  - path: asciidoctor.bat
 
 build:
   noarch: generic
-  number: 0
+  number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
-  skip: {{ win }}
+    - cp -v asciidoctor.bat $PREFIX/bin/asciidoctor.bat
 
 requirements:
   host:
