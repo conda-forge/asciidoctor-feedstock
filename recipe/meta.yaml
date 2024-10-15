@@ -16,7 +16,7 @@ build:
   script:
     - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
-    - cp -v asciidoctor.bat $PREFIX/bin/asciidoctor.bat  # [not win]
+    - cp -v asciidoctor.bat $PREFIX/bin/asciidoctor.bat
 
 requirements:
   host:
