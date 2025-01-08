@@ -1,5 +1,6 @@
 {% set name = "asciidoctor" %}
 {% set version = "2.0.23" %}
+{% set build = 2 %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +13,7 @@ source:
 
 build:
   noarch: generic
-  number: 1
+  number: {{ build }}
   script:
     - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
